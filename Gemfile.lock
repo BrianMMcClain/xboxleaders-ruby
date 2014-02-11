@@ -1,0 +1,16 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    htmlentities (4.3.1)
+    json (1.8.1)
+    netrc (0.7.7)
+    rest_client (1.7.2)
+      netrc (~> 0.7.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  htmlentities
+  json
+  rest_client
