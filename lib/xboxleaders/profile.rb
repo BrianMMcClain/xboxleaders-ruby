@@ -57,7 +57,6 @@ module XboxLeaders
 		end
 
 		def games
-			#https://www.xboxleaders.com/api/games.json?gamertag=AltarCrystal
 			req_url = "#{@base_url}/games.json?gamertag=#{URI::encode(gamertag)}"
 			j = RestClient.get req_url
 			gamesobj = JSON.parse(j)

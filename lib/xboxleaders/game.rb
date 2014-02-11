@@ -1,5 +1,6 @@
 require 'json'
 require 'date'
+require 'rest_client'
 
 module XboxLeaders
 
@@ -8,7 +9,7 @@ module XboxLeaders
 		attr_accessor :gamertag, :id, :hid, :isapp, :title, :artwork_small, :artwork_large, :gamerscore_current,
 			:gamerscore_total, :achievements_current, :achievements_total, :progress, :lastplayed
 
-		def self.fetch(gamertag, id)
+		def self.fetch(id, gamertag)
 
 		end
 
@@ -18,6 +19,7 @@ module XboxLeaders
 			game.id = gobj['id']
 			game.hid = gobj['hid']
 			game.isapp = gobj['isapp']
+			# TODO: Clean up title (eg. "Assassin&#039;s Creed II")
 			game.title = gobj['title']
 			game.artwork_small = gobj['artwork']['small']
 			game.artwork_large = gobj['artwork']['large']
@@ -31,6 +33,21 @@ module XboxLeaders
 			game.lastplayed = Time.at(gobj['lastplayed']).utc.to_datetime
 
 			return game
+		end
+
+		def achievements(base_url="https://www.xboxleaders.com/api")
+			req_url = "#{base_url}/achievements.json?gamertag=#{URI::encode(gamertag)}&gameid=#{id}"
+			j = RestClient.get req_url
+			achievements_hash = JSON.parse(j)
+
+			achievements = []
+			achievements_hash['data']['achievements'].each do |achievement_hash|
+				achievement = XboxLeaders::Achievement.from_hash(@gamertag, @title, @id, achievement_hash)
+				achievements << achievement
+			end
+
+			return achievements
+
 		end
 
 	end
