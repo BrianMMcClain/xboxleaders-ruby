@@ -12,10 +12,7 @@ module XboxLeaders
 		end
 
 		def profile(gamertag)
-			req_url = "#{@base_url}/profile.json?gamertag=#{URI::encode(gamertag)}"
-			puts req_url
-			j = RestClient.get req_url
-			profile = XboxLeaders::Profile.from_json(j)
+			profile = XboxLeaders::Profile.from_gamertag(gamertag, @base_url)
 			return profile
 		end
 	end
