@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.xboxleaders.com/api/profile.json?gamertag=AltarCrystal
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 21 Feb 2014 21:51:53 GMT
+      Server:
+      - Apache/2.2.22 (Ubuntu)
+      X-Powered-By:
+      - PHP/5.4.24-1+sury.org~precise+1
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '3628800'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, max-age=0, proxy-revalidate, no-transform
+      Expires:
+      - Fri, 21 Feb 2014 21:51:53 GMT
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '4905'
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! "{\n    \"status\": \"success\",\n    \"version\": \"2.0\",\n    \"data\":
+        {\n        \"gamertag\": \"AltarCrystal\",\n        \"tier\": \"gold\",\n
+        \       \"badges\": {\n            \"xboxlaunchteam\": false,\n            \"nxelaunchteam\":
+        false,\n            \"kinectlaunchteam\": false\n        },\n        \"avatar\":
+        {\n            \"full\": \"http://avatar.xboxlive.com/avatar/AltarCrystal/avatar-body.png\",\n
+        \           \"small\": \"http://avatar.xboxlive.com/avatar/AltarCrystal/avatarpic-s.png\",\n
+        \           \"large\": \"http://avatar.xboxlive.com/avatar/AltarCrystal/avatarpic-l.png\",\n
+        \           \"tile\": \"http://avatar.xboxlive.com/avatar/AltarCrystal/avatarpic-l.png\"\n
+        \       },\n        \"gamerscore\": 7765,\n        \"reputation\": 20,\n        \"presence\":
+        \"Last seen 2/18/2014 playing Xbox.com\",\n        \"online\": false,\n        \"motto\":
+        \"\",\n        \"name\": \"Brian\",\n        \"location\": \"\",\n        \"biography\":
+        \"\",\n        \"recentactivity\": [\n            {\n                \"id\":
+        1297287601,\n                \"hid\": \"4d5309b1\",\n                \"isapp\":
+        false,\n                \"title\": \"Halo: CE Anniversary\",\n                \"artwork\":
+        {\n                    \"small\": \"http://download.xbox.com/content/images/66acd000-77fe-1000-9115-d8024d5309b1/1033/boxartsm.jpg\",\n
+        \                   \"large\": \"http://download.xbox.com/content/images/66acd000-77fe-1000-9115-d8024d5309b1/1033/boxartlg.jpg\"\n
+        \               },\n                \"gamerscore\": {\n                    \"current\":
+        290,\n                    \"total\": 1000\n                },\n                \"achievements\":
+        {\n                    \"current\": 14,\n                    \"total\": 44\n
+        \               },\n                \"progress\": 31.8,\n                \"lastplayed\":
+        1392258129\n            },\n            {\n                \"id\": 1414793275,\n
+        \               \"hid\": \"5454083b\",\n                \"isapp\": false,\n
+        \               \"title\": \"GTA IV PC\",\n                \"artwork\": {\n
+        \                   \"small\": \"http://download.xbox.com/content/images/66acd000-77fe-1000-9115-d8025454083b/1033/boxartsm.jpg\",\n
+        \                   \"large\": \"http://download.xbox.com/content/images/66acd000-77fe-1000-9115-d8025454083b/1033/boxartlg.jpg\"\n
+        \               },\n                \"gamerscore\": {\n                    \"current\":
+        80,\n                    \"total\": 1500\n                },\n                \"achievements\":
+        {\n                    \"current\": 9,\n                    \"total\": 65\n
+        \               },\n                \"progress\": 13.8,\n                \"lastplayed\":
+        1391488112\n            },\n            {\n                \"id\": 1414793383,\n
+        \               \"hid\": \"545408a7\",\n                \"isapp\": false,\n
+        \               \"title\": \"Grand Theft Auto V\",\n                \"artwork\":
+        {\n                    \"small\": \"http://download.xbox.com/content/images/66acd000-77fe-1000-9115-d802545408a7/1033/boxartsm.jpg\",\n
+        \                   \"large\": \"http://download.xbox.com/content/images/66acd000-77fe-1000-9115-d802545408a7/1033/boxartlg.jpg\"\n
+        \               },\n                \"gamerscore\": {\n                    \"current\":
+        230,\n                    \"total\": 1000\n                },\n                \"achievements\":
+        {\n                    \"current\": 15,\n                    \"total\": 49\n
+        \               },\n                \"progress\": 30.6,\n                \"lastplayed\":
+        1389827447\n            },\n            {\n                \"id\": 1297287724,\n
+        \               \"hid\": \"4d530a2c\",\n                \"isapp\": true,\n
+        \               \"title\": \"Project Spark\",\n                \"artwork\":
+        {\n                    \"small\": \"http://download.xbox.com/content/images/66acd000-77fe-1000-9115-d8024d530a2c/1033/boxartsm.jpg\",\n
+        \                   \"large\": \"http://download.xbox.com/content/images/66acd000-77fe-1000-9115-d8024d530a2c/1033/boxartlg.jpg\"\n
+        \               },\n                \"gamerscore\": {\n                    \"current\":
+        0,\n                    \"total\": 0\n                },\n                \"achievements\":
+        {\n                    \"current\": 0,\n                    \"total\": 0\n
+        \               },\n                \"progress\": 0,\n                \"lastplayed\":
+        1389316924\n            },\n            {\n                \"id\": 1481115739,\n
+        \               \"hid\": \"5848085b\",\n                \"isapp\": true,\n
+        \               \"title\": \"Xbox Music and Video\",\n                \"artwork\":
+        {\n                    \"small\": \"http://download.xbox.com/content/images/66acd000-77fe-1000-9115-d8025848085b/1033/boxartsm.jpg\",\n
+        \                   \"large\": \"http://download.xbox.com/content/images/66acd000-77fe-1000-9115-d8025848085b/1033/boxartlg.jpg\"\n
+        \               },\n                \"gamerscore\": {\n                    \"current\":
+        0,\n                    \"total\": 0\n                },\n                \"achievements\":
+        {\n                    \"current\": 0,\n                    \"total\": 0\n
+        \               },\n                \"progress\": 0,\n                \"lastplayed\":
+        1388942440\n            }\n        ],\n        \"freshness\": \"new\"\n    },\n
+        \   \"runtime\": 4.762\n}"
+    http_version: 
+  recorded_at: Fri, 21 Feb 2014 21:51:58 GMT
+recorded_with: VCR 2.3.0
